@@ -1,0 +1,26 @@
+#/*
+#|--------------------------------------------------------------------------
+#| custom.routing.yml
+#|--------------------------------------------------------------------------
+#| AArquivo onde informamos a rota em nosso site Drupal
+#| author Gianlucca Augusto <gianlucca.augusto@extreme.digital>
+#| version 1.0
+#| copyright Proderj 2022.
+#*/
+custom_form:
+  path: '/customform'
+  defaults:
+    _form: '\Drupal\custom\Form\CustomForm'
+    _title: 'Form'
+  requirements:
+   _permission: 'access content'
+
+custom.admin_settings_form:  
+  path: '/admin/config/custom/adminsettings'
+  defaults:  
+    _title: 'Formulário' 
+    _form: '\Drupal\custom\Form\customAdminForm'   
+  requirements:  
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE

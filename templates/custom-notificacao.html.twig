@@ -1,0 +1,37 @@
+<h2><b>Formulário Para Exposição Cultural</b></h2>
+<p><b>Nome</b>: {{ message_body.nome }}</p>
+<p><b>E-mail</b>: {{ message_body.email }}</p>
+<p><b>Telefone</b>: {{ message_body.telefone }}</p>
+<p><b>Mensagem</b>: {{ message_body.msg }}</p>
+
+<style>
+/* unvisited link */
+a:link {
+  color: #006aa7;
+  text-decoration:none
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: #003757;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: #2c3e4c;
+} 
+</style>
+<ul>
+    {% for file in message_body.arquivo %}
+        <li><a href="{{ file[1] }}" target="_blank">{{ file[0] }}</a></li>
+    {% else %}
+        <li>Nenhum arquivo</li>
+    {% endfor %}
+    
+</ul>

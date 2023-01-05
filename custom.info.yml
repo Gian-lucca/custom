@@ -1,0 +1,15 @@
+#/*
+#|--------------------------------------------------------------------------
+#| custom.info.yml
+#|--------------------------------------------------------------------------
+#| Arquivo onde podemos criar um menu automárico para o site Drupal
+#| author Gianlucca Augusto <gianlucca.augusto@extreme.digital>
+#| version 1.0
+#| copyright Proderj 2022.
+#*/
+
+name: 'Formularios'
+description: 'Formulários Ceperj.'
+package: 'Custom Form'
+type: 'module'
+core_version_requirement: ^8 || ^9 || ^10
